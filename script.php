@@ -13,9 +13,7 @@ $WATCHMODE_API_KEY = 'WATCHMODE_API_KEY';
 $TMDB_API_KEY      = 'TMDB_API_KEY';
 $TELEGRAM_BOT_TOKEN = getenv('TELEGRAM_BOT_TOKEN');
 $TELEGRAM_CHAT_ID  = getenv('TELEGRAM_CHAT_ID');
-$message = "Teste GitHub Actions -> Telegram";
-sendTelegramMessage($TELEGRAM_BOT_TOKEN, $TELEGRAM_CHAT_ID, $message);
-exit;
+
 $startDate = new DateTime('today');
 $endDate   = (clone $startDate)->modify('+6 days');
 
@@ -127,6 +125,16 @@ function getWeeklyReleases(
     return $data['releases'] ?? [];
 }
 // ===== FIM BUSCAR LANÇAMENTOS DA SEMANA =====
+
+// ===== ESCAPAR CARACTERES MARKDOWN =====
+function escapeMarkdown(string $text): string {
+    return str_replace(
+        ['\\', '_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!'],
+        ['\\\\','\_','\*','\[','\]','\(','\)','\~','\`','\>','\#','\+','\-','\=','\|','\{','\}','\.','\!'],
+        $text
+    );
+}
+// ===== ESCAPAR CARACTERES MARKDOWN =====
 
 // ===== NORMALIZAR LANÇAMENTOS =====
 function normalizeReleases(array $releases): array
@@ -262,7 +270,7 @@ foreach ($alerts as $item) {
     $typeLabel = $item['type'] === 'tv' ? 'Série' : 'Filme';
 
     $message  = "🎬 *Lançamentos da Semana*\n\n";
-    $message .= "*{$item['title']}* ({$typeLabel})\n";
+    $message .= "*" . escapeMarkdown($item['title']) . "* ({$typeLabel})\n";
     $message .= "📺 {$item['streaming']['name']}\n";
     $date = DateTime::createFromFormat('Y-m-d', $item['streaming']['release_date']);
     $formattedDate = $date ? $date->format('d/m/Y') : $item['streaming']['release_date'];
