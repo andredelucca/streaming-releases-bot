@@ -1,22 +1,29 @@
 name: Weekly Streaming Releases
 
+# Rodar no cron toda sexta-feira às 10:00 UTC
 on:
   schedule:
-    - cron: '0 10 * * 1' # toda segunda às 10h UTC
-  workflow_dispatch: # permite rodar manualmente
+    - cron: '0 10 * * 5'
+  workflow_dispatch: # Permite rodar manualmente
 
 jobs:
-  run-script:
+  run-bot:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Configurar PHP
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: 8.2
+          extensions: curl
 
-      - name: Rodar script
+      - name: Run streaming releases script
+        env:
+          WATCHMODE_API_KEY: ${{ secrets.WATCHMODE_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: php script.php
