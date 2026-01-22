@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-$message = "Teste GitHub Actions -> Telegram";
-sendTelegramMessage($TELEGRAM_BOT_TOKEN, $TELEGRAM_CHAT_ID, $message);
-exit;
-
 echo "Início do script\n";
 
 // ===== CONFIG =====
@@ -17,7 +13,9 @@ $WATCHMODE_API_KEY = 'WATCHMODE_API_KEY';
 $TMDB_API_KEY      = 'TMDB_API_KEY';
 $TELEGRAM_BOT_TOKEN = getenv('TELEGRAM_BOT_TOKEN');
 $TELEGRAM_CHAT_ID  = getenv('TELEGRAM_CHAT_ID');
-
+$message = "Teste GitHub Actions -> Telegram";
+sendTelegramMessage($TELEGRAM_BOT_TOKEN, $TELEGRAM_CHAT_ID, $message);
+exit;
 $startDate = new DateTime('today');
 $endDate   = (clone $startDate)->modify('+6 days');
 
