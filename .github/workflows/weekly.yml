@@ -1,0 +1,22 @@
+name: Weekly Streaming Releases
+
+on:
+  schedule:
+    - cron: '0 10 * * 1' # toda segunda às 10h UTC
+  workflow_dispatch: # permite rodar manualmente
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Rodar script
+        run: php script.php
