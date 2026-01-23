@@ -3,7 +3,7 @@ name: Weekly Streaming Releases
 # Rodar no cron toda sexta-feira às 10:00 UTC
 on:
   schedule:
-    - cron: '0 10 * * 5'
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Permite rodar manualmente
 
 jobs:
