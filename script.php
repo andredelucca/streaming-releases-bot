@@ -22,49 +22,70 @@ $END_DATE   = $endDate->format('Y-m-d');
 
 // IDs de interesse
 $ACTORS_IDS = [
-    31,     // Tom Hanks
-    287,    // Brad Pitt
-    6193,   // Leonardo DiCaprio
-    85,     // Johnny Depp
-    380,    // Robert De Niro
-    1158,   // Al Pacino
-    5292,   // Denzel Washington
-    192,    // Morgan Freeman
-    2888,   // Will Smith
-    6384,   // Keanu Reeves
-    1892,   // Matt Damon
-    30614,  // Ryan Gosling
-    3894,   // Christian Bale
-    500,    // Tom Cruise
-    514,    // Jack Nicholson
-    819,    // Edward Norton
-    2461,   // Mel Gibson
-    4173,   // Anthony Hopkins
-    2228,   // Sean Penn
-    934,    // Russell Crowe
-    206,    // Jim Carrey
-    52583,  // Wagner Moura
-    17289,  // Rodrigo Santoro
-    57755,  // Woody Harrelson
-    4483,   // Dustin Hoffman
-    1245,   // Scarlett Johansson
-    524,    // Natalie Portman
-    72129,  // Jennifer Lawrence
-    11701,  // Angelina Jolie
-    5064,   // Meryl Streep
-    54693,  // Emma Stone
-    40462,  // Kristen Bell
-    18277,  // Sandra Bullock
-    2227,   // Nicole Kidman
-    1204,   // Julia Roberts
-    112,    // Cate Blanchett
-    1378310,// Judie Foster
-    7056,   // Emma Thompson
-    1813,   // Anne Hathaway
-    204,    // Kate Winslet
-    1231,   // Julianne Moore
-    448,    // Hilary Swank
-    84223,  // Anna Kendrick
+    19292,   // Adam Sandler
+    1158,    // Al Pacino
+    11701,   // Angelina Jolie
+    84223,   // Anna Kendrick
+    1813,    // Anne Hathaway
+    4173,    // Anthony Hopkins
+    7399,    // Bem Stiller
+    287,     // Brad Pitt
+    6941,    // Cameron Dias
+    112,     // Cate Blanchett
+    27319,   // Christoph Waltz
+    3894,    // Christian Bale
+    5292,    // Denzel Washington
+    9824,    // Diane Kruger
+    4483,    // Dustin Hoffman
+    819,     // Edward Norton
+    54693,   // Emma Stone
+    7056,    // Emma Thompson
+    1278487, // Hannah Waddingham
+    448,     // Hilary Swank
+    6968,    // Hugh Jackman
+    70851,   // Jack Black
+    514,     // Jack Nicholson
+    1708266, // Jamie Foxx
+    58224,   // Jason Sudeikis
+    4491,    // Jennifer Aniston
+    72129,   // Jennifer Lawrence
+    16866,   // Jennifer Lopez
+    206,     // Jim Carrey
+    8891,    // John Travolta
+    85,      // Johnny Depp
+    1204,    // Julia Roberts
+    1231,    // Julianne Moore
+    1378310, // Judie Foster
+    204,     // Kate Winslet
+    6384,    // Keanu Reeves
+    40462,   // Kristen Bell
+    6193,    // Leonardo DiCaprio
+    103,     // Mark Ruffalo
+    1892,    // Matt Damon
+    2461,    // Mel Gibson
+    5064,    // Meryl Streep
+    2232,    // Michael Keaton
+    192,     // Morgan Freeman
+    524,     // Natalie Portman
+    2963,    // Nicolas Cage
+    2227,    // Nicole Kidman
+    59315,   // Olivia Wilde
+    69310,   // Ricardo Darin
+    380,     // Robert De Niro
+    3223,    // Robert Downey Jr.
+    17289,   // Rodrigo Santoro
+    934,     // Russell Crowe
+    30614,   // Ryan Gosling
+    18277,   // Sandra Bullock
+    1245,    // Scarlett Johansson
+    2228,    // Sean Penn
+    500,     // Tom Cruise
+    31,      // Tom Hanks
+    139,     // Uma Thurman
+    52583,   // Wagner Moura
+    2888,    // Will Smith
+    1920,    // Winona Ryder
+    57755,   // Woody Harrelson
 ];
 
 $DIRECTORS_IDS = [
@@ -80,8 +101,8 @@ $DIRECTORS_IDS = [
     2636,   // Alfred Hitchcock
     240,    // Stanley Kubrick
     108,    // Peter Jackson
+    510,    // Tim Burton
 ];
-
 // ===== FIM CONFIG =====
 
 // ===== FUNÇÃO HTTP =====
