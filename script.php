@@ -85,7 +85,7 @@ $ACTORS_IDS = [
     52583,   // Wagner Moura
     2888,    // Will Smith
     1920,    // Winona Ryder
-    57755,   // Woody Harrelson
+    57755,   // Woody Harrelson (último)
 ];
 
 $DIRECTORS_IDS = [
