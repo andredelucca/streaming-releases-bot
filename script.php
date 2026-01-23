@@ -33,14 +33,38 @@ $ACTORS_IDS = [
     2888,   // Will Smith
     6384,   // Keanu Reeves
     1892,   // Matt Damon
+    30614,  // Ryan Gosling
     3894,   // Christian Bale
+    500,    // Tom Cruise
+    514,    // Jack Nicholson
+    819,    // Edward Norton
+    2461,   // Mel Gibson
+    4173,   // Anthony Hopkins
+    2228,   // Sean Penn
+    934,    // Russell Crowe
+    206,    // Jim Carrey
+    52583,  // Wagner Moura
+    17289,  // Rodrigo Santoro
+    57755,  // Woody Harrelson
+    4483,   // Dustin Hoffman
     1245,   // Scarlett Johansson
     524,    // Natalie Portman
     72129,  // Jennifer Lawrence
     11701,  // Angelina Jolie
     5064,   // Meryl Streep
     54693,  // Emma Stone
-    30614,  // Ryan Gosling
+    40462,  // Kristen Bell
+    18277,  // Sandra Bullock
+    2227,   // Nicole Kidman
+    1204,   // Julia Roberts
+    112,    // Cate Blanchett
+    1378310,// Judie Foster
+    7056,   // Emma Thompson
+    1813,   // Anne Hathaway
+    204,    // Kate Winslet
+    1231,   // Julianne Moore
+    448,    // Hilary Swank
+    84223,  // Anna Kendrick
 ];
 
 $DIRECTORS_IDS = [
