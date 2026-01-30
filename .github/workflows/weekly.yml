@@ -3,7 +3,7 @@ name: Weekly Streaming Releases
 # Sexta-feira às 15:30 (America/Sao_Paulo)
 on:
   schedule:
-    - cron: '30 12 * * 5'
+    - cron: '10 13 * * 5'
   workflow_dispatch: # Permite rodar manualmente
 
 jobs:
